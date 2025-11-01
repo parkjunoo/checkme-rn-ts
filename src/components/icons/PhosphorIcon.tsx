@@ -1,5 +1,11 @@
 import React from "react";
-import { View, StyleSheet, ViewStyle, Text } from "react-native";
+import { View, StyleSheet, ViewStyle } from "react-native";
+import {
+  CaretLeft,
+  MagnifyingGlass,
+  Bell,
+  DotsThreeVertical,
+} from "../../assets/icons";
 
 export type PhosphorIconVariant = "outline" | "bold" | "fill";
 export type PhosphorIconSize = "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
@@ -16,39 +22,7 @@ export type PhosphorIconName =
   | "caret-left"
   | "magnifying-glass"
   | "bell"
-  | "check-fat"
-  | "check"
-  | "star"
-  | "heart"
-  | "x-circle"
-  | "caret-down"
-  | "plus-circle"
-  | "dots-three-vertical"
-  | "share-fat"
-  | "plus"
-  | "x"
-  | "clock"
-  | "dots-three-outline"
-  | "check-circle"
-  | "hourglass"
-  | "minus-circle"
-  | "crown-simple"
-  | "infinity"
-  | "pencil-simple-line"
-  | "siren"
-  | "sign-out"
-  | "fire-simple"
-  | "arrows-down-up"
-  | "funnel"
-  | "warning-circle"
-  | "image"
-  | "circle-notch"
-  | "arrow-clockwise"
-  | "thumbs-up"
-  | "spinner"
-  | "cross"
-  | "correct"
-  | "eraser";
+  | "dots-three-vertical";
 
 const getSizeValue = (size: PhosphorIconSize | number): number => {
   if (typeof size === "number") return size;
@@ -65,197 +39,15 @@ const getSizeValue = (size: PhosphorIconSize | number): number => {
   return sizeMap[size];
 };
 
-const getIconSymbol = (
-  name: PhosphorIconName,
-  variant: PhosphorIconVariant
-): string => {
-  const iconMap: Record<
-    PhosphorIconName,
-    Record<PhosphorIconVariant, string>
-  > = {
-    "caret-left": {
-      outline: "◀",
-      bold: "◀",
-      fill: "◀",
-    },
-    "magnifying-glass": {
-      outline: "🔍",
-      bold: "🔍",
-      fill: "🔍",
-    },
-    bell: {
-      outline: "🔔",
-      bold: "🔔",
-      fill: "🔔",
-    },
-    "check-fat": {
-      outline: "✓",
-      bold: "✓",
-      fill: "✓",
-    },
-    check: {
-      outline: "✓",
-      bold: "✓",
-      fill: "✓",
-    },
-    star: {
-      outline: "★",
-      bold: "★",
-      fill: "★",
-    },
-    heart: {
-      outline: "♥",
-      bold: "♥",
-      fill: "♥",
-    },
-    "x-circle": {
-      outline: "✕",
-      bold: "✕",
-      fill: "✕",
-    },
-    "caret-down": {
-      outline: "▼",
-      bold: "▼",
-      fill: "▼",
-    },
-    "plus-circle": {
-      outline: "⊕",
-      bold: "⊕",
-      fill: "⊕",
-    },
-    "dots-three-vertical": {
-      outline: "⋮",
-      bold: "⋮",
-      fill: "⋮",
-    },
-    "share-fat": {
-      outline: "↗",
-      bold: "↗",
-      fill: "↗",
-    },
-    plus: {
-      outline: "+",
-      bold: "+",
-      fill: "+",
-    },
-    x: {
-      outline: "×",
-      bold: "×",
-      fill: "×",
-    },
-    clock: {
-      outline: "🕐",
-      bold: "🕐",
-      fill: "🕐",
-    },
-    "dots-three-outline": {
-      outline: "⋯",
-      bold: "⋯",
-      fill: "⋯",
-    },
-    "check-circle": {
-      outline: "✓",
-      bold: "✓",
-      fill: "✓",
-    },
-    hourglass: {
-      outline: "⏳",
-      bold: "⏳",
-      fill: "⏳",
-    },
-    "minus-circle": {
-      outline: "⊖",
-      bold: "⊖",
-      fill: "⊖",
-    },
-    "crown-simple": {
-      outline: "♔",
-      bold: "♔",
-      fill: "♔",
-    },
-    infinity: {
-      outline: "∞",
-      bold: "∞",
-      fill: "∞",
-    },
-    "pencil-simple-line": {
-      outline: "✎",
-      bold: "✎",
-      fill: "✎",
-    },
-    siren: {
-      outline: "⚠",
-      bold: "⚠",
-      fill: "⚠",
-    },
-    "sign-out": {
-      outline: "↪",
-      bold: "↪",
-      fill: "↪",
-    },
-    "fire-simple": {
-      outline: "🔥",
-      bold: "🔥",
-      fill: "🔥",
-    },
-    "arrows-down-up": {
-      outline: "↕",
-      bold: "↕",
-      fill: "↕",
-    },
-    funnel: {
-      outline: "🔽",
-      bold: "🔽",
-      fill: "🔽",
-    },
-    "warning-circle": {
-      outline: "⚠",
-      bold: "⚠",
-      fill: "⚠",
-    },
-    image: {
-      outline: "🖼",
-      bold: "🖼",
-      fill: "🖼",
-    },
-    "circle-notch": {
-      outline: "⟳",
-      bold: "⟳",
-      fill: "⟳",
-    },
-    "arrow-clockwise": {
-      outline: "↻",
-      bold: "↻",
-      fill: "↻",
-    },
-    "thumbs-up": {
-      outline: "👍",
-      bold: "👍",
-      fill: "👍",
-    },
-    spinner: {
-      outline: "⟳",
-      bold: "⟳",
-      fill: "⟳",
-    },
-    cross: {
-      outline: "✗",
-      bold: "✗",
-      fill: "✗",
-    },
-    correct: {
-      outline: "✓",
-      bold: "✓",
-      fill: "✓",
-    },
-    eraser: {
-      outline: "🗑",
-      bold: "🗑",
-      fill: "🗑",
-    },
+const getIconComponent = (name: PhosphorIconName) => {
+  const iconMap: Record<PhosphorIconName, React.ComponentType<any>> = {
+    "caret-left": CaretLeft,
+    "magnifying-glass": MagnifyingGlass,
+    bell: Bell,
+    "dots-three-vertical": DotsThreeVertical,
   };
 
-  return iconMap[name][variant];
+  return iconMap[name];
 };
 
 const PhosphorIcon: React.FC<PhosphorIconProps> = ({
@@ -266,22 +58,18 @@ const PhosphorIcon: React.FC<PhosphorIconProps> = ({
   style,
 }) => {
   const iconSize = getSizeValue(size);
-  const iconSymbol = getIconSymbol(name, variant);
+  const IconComponent = getIconComponent(name);
+
+  if (!IconComponent) {
+    console.warn(`Icon "${name}" not found`);
+    return null;
+  }
 
   return (
     <View
       style={[styles.container, { width: iconSize, height: iconSize }, style]}
     >
-      <Text
-        style={{
-          fontSize: iconSize,
-          color: color,
-          textAlign: "center",
-          lineHeight: iconSize,
-        }}
-      >
-        {iconSymbol}
-      </Text>
+      <IconComponent width={iconSize} height={iconSize} color={color} />
     </View>
   );
 };

@@ -17,12 +17,22 @@ export const customTokens = createTokens({
   ...tokens,
   color: {
     ...tokens.color,
-    // Primary colors
-    primary: colors.primary[500],
-    primaryHover: colors.primary[600],
-    primaryActive: colors.primary[700],
-    primaryLight: colors.primary[100],
-    primaryDark: colors.primary[800],
+    // Primary colors - Based on Figma Blue palette
+    primary: colors.primary[500], // #328FEE
+    primaryHover: colors.primary[600], // #0866CA
+    primaryActive: colors.primary[700], // #0F4382
+    primaryLight: colors.primary[100], // #ECF4FB
+    primaryDark: colors.primary[800], // #18365E
+
+    // Primary scale
+    primary100: colors.primary[100],
+    primary200: colors.primary[200],
+    primary300: colors.primary[300],
+    primary400: colors.primary[400],
+    primary500: colors.primary[500],
+    primary600: colors.primary[600],
+    primary700: colors.primary[700],
+    primary800: colors.primary[800],
 
     // Secondary colors
     secondary: colors.secondary[500],
@@ -97,6 +107,18 @@ export const customTokens = createTokens({
     figmaCardBackground: colors.figma.cardBackground,
     figmaCardBorder: colors.figma.cardBorder,
     figmaThumbnailBg: colors.figma.thumbnailBg,
+
+    // System colors from Figma
+    systemGreen: colors.system.green,
+    systemRed: colors.system.red,
+
+    // Check colors from Figma
+    checkBlue: colors.system.check.blue,
+    checkTeal: colors.system.check.teal,
+    checkRed: colors.system.check.red,
+    checkPurple: colors.system.check.purple,
+    checkYellow: colors.system.check.yellow,
+    checkPink: colors.system.check.pink,
   },
 
   space: {
@@ -141,30 +163,6 @@ export const customTokens = createTokens({
     "6xl": spacing["6xl"],
     "7xl": spacing["7xl"],
     "8xl": spacing["8xl"],
-  },
-
-  font: {
-    ...tokens.font,
-    body: typography.fontFamily.sans,
-    heading: typography.fontFamily.sans,
-    mono: typography.fontFamily.mono,
-  },
-
-  fontSize: {
-    ...tokens.fontSize,
-    xs: typography.fontSize.xs,
-    sm: typography.fontSize.sm,
-    base: typography.fontSize.base,
-    lg: typography.fontSize.lg,
-    xl: typography.fontSize.xl,
-    "2xl": typography.fontSize["2xl"],
-    "3xl": typography.fontSize["3xl"],
-    "4xl": typography.fontSize["4xl"],
-    "5xl": typography.fontSize["5xl"],
-    "6xl": typography.fontSize["6xl"],
-    "7xl": typography.fontSize["7xl"],
-    "8xl": typography.fontSize["8xl"],
-    "9xl": typography.fontSize["9xl"],
   },
 });
 

@@ -1,18 +1,15 @@
 // Design Tokens based on Figma Design System
 export const colors = {
-  // Primary Colors - Based on Figma design
+  // Primary Colors - Based on Figma Blue palette
   primary: {
-    50: "#EFF6FF",
-    100: "#DBEAFE",
-    200: "#BFDBFE",
-    300: "#93C5FD",
-    400: "#60A5FA",
-    500: "#328FEE", // Main primary from Figma
-    600: "#2563EB",
-    700: "#1D4ED8",
-    800: "#1E40AF",
-    900: "#1E3A8A",
-    950: "#172554",
+    100: "#ECF4FB", // Lightest blue
+    200: "#D9ECFC", // Light blue
+    300: "#B4DBFC", // Medium light blue
+    400: "#59B3FF", // Medium blue
+    500: "#328FEE", // Main primary (500)
+    600: "#0866CA", // Dark blue
+    700: "#0F4382", // Darker blue
+    800: "#18365E", // Darkest blue
   },
 
   // Secondary Colors - Modern Purple
@@ -75,21 +72,21 @@ export const colors = {
     950: "#450A0A",
   },
 
-  // Neutral Colors
+  // Neutral Colors - Based on Figma Gray palette
   neutral: {
     0: "#FFFFFF",
-    50: "#FAFAFA",
-    100: "#F5F5F5",
-    200: "#E5E5E5",
-    300: "#D4D4D4",
-    400: "#A3A3A3",
-    500: "#737373",
-    600: "#525252",
-    700: "#404040",
-    800: "#262626",
-    900: "#171717",
-    950: "#0A0A0A",
-    1000: "#000000",
+    50: "#FAFAFA", // Extra light gray
+    100: "#F1F4F7", // Lightest gray
+    200: "#E1E5EA", // Light gray
+    300: "#BDC7D1", // Medium light gray
+    400: "#A3A3A3", // Medium light gray
+    500: "#8C96A2", // Medium gray
+    600: "#525252", // Medium dark gray
+    700: "#616977", // Dark gray
+    800: "#3F4654", // Darker gray
+    900: "#191F2A", // Darkest gray
+    950: "#0A0A0A", // Extra dark gray
+    1000: "#000000", // Black
   },
 
   // Semantic Colors - Based on Figma design
@@ -112,6 +109,25 @@ export const colors = {
     secondary: "#D4D4D4",
     focus: "#328FEE", // Primary color
     error: "#EF4444",
+  },
+
+  // System Colors - Based on Figma System palette
+  system: {
+    // Green (Success)
+    green: "#0DCB56",
+
+    // Red (Error)
+    red: "#FA6C6C",
+
+    // Check colors (Status indicators)
+    check: {
+      blue: "#E6F1FF", // Check 01
+      teal: "#D9F1F2", // Check 02
+      red: "#FFECEC", // Check 03
+      purple: "#E8EEFE", // Check 04
+      yellow: "#FFF9EC", // Check 05
+      pink: "#F6E8FE", // Check 06
+    },
   },
 
   // Figma-specific colors

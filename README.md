@@ -209,8 +209,6 @@ const spacing = {
 모든 컴포넌트를 확인하려면 `DesignSystemDemo` 컴포넌트를 사용하세요:
 
 ```tsx
-import { DesignSystemDemo } from './src/components';
 
 // 앱에서 모든 컴포넌트 확인
-<DesignSystemDemo />
 ```

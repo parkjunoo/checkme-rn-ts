@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { CheckNoteItem } from "../../components";
-import { SearchHeader } from "../../components/common/Header";
+import { SearchHeader } from "../../components/common/MainHeader";
 import { useDesignSystem } from "../../hooks/useDesignSystem";
 
 interface FilterChipProps {

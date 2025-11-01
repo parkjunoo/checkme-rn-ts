@@ -6,6 +6,7 @@ import {
   ViewStyle,
   TextStyle,
 } from "react-native";
+import { colors } from "../../theme/tokens";
 // import { Ionicons } from "@expo/vector-icons";
 
 interface ButtonProps {
@@ -69,17 +70,17 @@ const Button: React.FC<ButtonProps> = ({
     // Variant styles
     const variantStyles: Record<string, ViewStyle> = {
       primary: {
-        backgroundColor: isDisabled ? "#BDC7D1" : "#191F2A",
+        backgroundColor: isDisabled ? colors.blue[200] : colors.primary[500],
         borderWidth: 0,
       },
       secondaryA: {
-        backgroundColor: isDisabled ? "#BDC7D1" : "#E1E5EA",
+        backgroundColor: isDisabled ? colors.neutral[300] : colors.neutral[200],
         borderWidth: 0,
       },
       secondaryB: {
         backgroundColor: "transparent",
         borderWidth: 1,
-        borderColor: isDisabled ? "#BDC7D1" : "#E1E5EA",
+        borderColor: isDisabled ? colors.neutral[300] : colors.neutral[200],
       },
       text: {
         backgroundColor: "transparent",

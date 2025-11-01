@@ -1,8 +1,15 @@
-import React from "react";
-import DesignSystemDemo from "../../components/examples/DesignSystemDemo";
+import { View, Text } from "react-native";
+import { Button } from "../../components/common";
+import CommonLayout from "../../layouts/CommonLayout";
 
-const HomeScreen: React.FC = () => {
-  return <DesignSystemDemo />;
-};
-
-export default HomeScreen;
+export default function HomeScreen() {
+  return (
+    <CommonLayout>
+      <Button title="Click me" onPress={() => {}} />
+      <Button title="Click me" onPress={() => {}} variant="secondaryA" />
+      <Button title="Click me" onPress={() => {}} variant="secondaryB" />
+      <Button title="Click me" onPress={() => {}} variant="text" />
+      <Text>Home Screen Content</Text>
+    </CommonLayout>
+  );
+}
